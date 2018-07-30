@@ -1,10 +1,7 @@
 # Today I learned
 
-## 20170730
+## 20180730
 
-### Python
-Hello!
+### e-learning for github
 
-* python
-* css3
-* html
+* github guide
