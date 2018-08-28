@@ -1,4 +1,4 @@
-# Study for ReadyWoman
+# Study 
 
 ## 20180730, Today I learned
 
