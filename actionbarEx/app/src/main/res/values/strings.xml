@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">actionbarEx</string>
+
+    <!--집단상담 activity_national_collectiveconsultation.xml string fragment1-->
+    <!--cc_def-->
+    <string name="cc_def_name">집단상담 프로그램은?</string>
+    <string name="cc_def_content">집단상담프로그램은 결혼, 출산으로 경력이 단절된 여성, 여성가장,
+        장기구직자들이 취업을 하기 전에 자신에 대한 이해를 도모하고 자존감을 높일 수 있는 프로그램입니다.</string>
+    <!--cc_who-->
+    <string name="who_name">누가 신청할 수 있나요?</string>
+    <string name="cc_who_tr1">취업을 원하는 미취업 여성</string>
+    <string name="cc_who_tr2">* 고용보험 가입자는 참여 불가능</string>
+    <!--cc_what-->
+    <string name="what_name">어떤 혜택이 있나요?</string>
+    <string name="common_what_tr1">직업상담</string>
+    <string name="common_what_tr2">직업교육훈련</string>
+    <string name="common_what_tr3">인턴십 지원</string>
+    <string name="common_what_tr4">취업연계</string>
+    <string name="common_what_tr5">취업 후 사후관리</string>
+    <!--cc_signup(신청방법)-->
+    <string name="signup_name">신청 방법</string>
+    <string name="blank">&#160;&#160;&#160;&#160;&#160;</string>
+    <string name="signup_tr1_td2">수강신청(온라인 또는 직접방문)</string>
+    cc_submit
+    <string name="submit_name">제출서류</string>
+    <string name="submit_tr1">구직신청서</string>
+    <string name="submit_tr2">참가신청서</string>
+    <string name="cc_submit_tr3">반명함사진 1매</string>
+    <string name="cc_submit_tr4">주민등록증 사본 1부</string>
+
+
+    <!--기타지원직업훈련 activity_national_etcsupport.xml string  fragment2-->
+    <!--etc_def-->
+    <string name="etc_def_name">지역산업맞춤 직업훈련은?</string>
+    <string name="etc_def_content">자치구 등 지역이 주도하는 고용·인적자원 개발사업을 통해
+        지역·산업별 특성에 맞는 고용창출 및 직업능력개발에 기여하고 지역 간 노동시장 불균형을 해소하기 위해
+        운영되는 고용노동부 일자리창출 지원사업</string>
+    <!--etc_who-->
+    <!--<string name="who_name">누가 신청할 수 있나요?</string>   : 내일배움카드제와 공통-->
+    <!--<string name="blank">&#160;&#160;&#160;&#160;&#160;</string>   : 내일배움카드제와 공통-->
+    <string name="etc_who_tr1">청년 구직자 분(만 39세 이하, 성별무관)</string>
+    <string name="etc_who_tr2">대학졸업 직전 학기를 마친 청년층</string>
+    <!--etc_what    :  여성가족부 지원사업과 공통-->
+    <!--<string name="what_name">어떤 혜택이 있나요?</string>-->
+    <!--<string name="common_what_tr1">직업상담</string>-->
+    <!--<string name="common_what_tr2">직업교육훈련</string>-->
+    <!--<string name="common_what_tr3">인턴십 지원</string>-->
+    <!--<string name="common_what_tr4">취업연계</string>-->
+    <!--<string name="common_what_tr5">취업 후 사후관리</string>-->
+    <!--etc_signup(신청방법)    :  여성가족부 지원사업과 공통-->
+    <!--<string name="signup_name">신청 방법</string>-->
+    <string name="num1">1.</string>
+    <string name="num2">2.</string>
+    <string name="num3">3.</string>
+    <!--<string name="signup_tr1_td2">수강신청(온라인 또는 직접방문)</string>-->
+    <string name="etc_signup_tr2_td2">구직신청서, 수강신청서 제출</string>
+    <string name="signup_tr3_td2">수강신청 및 접수 완료</string>
+    <!--etc_submit-->
+    <!--<string name="submit_name">제출서류</string>-->
+    <!--<string name="blank">&#160;&#160;&#160;&#160;&#160;</string>   : 내일배움카드제와 공통-->
+    <!--<string name="submit_tr1">구직신청서</string>-->
+    <!--<string name="submit_tr2">참가신청서</string>-->
+    <string name="submit_tr3">반명함사진(최종 선발시)</string>
+</resources>
