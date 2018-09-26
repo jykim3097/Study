@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .div2{
+            width:100px;
+            height: 30px;
+            background-color: aquamarine;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <div>content</div>
+    </div>
+    <input type="button" value="첫번째 방법" onclick="change();">
+    <input type="button" value="두번째 방법" onclick="change2();">
+    <a onclick="change()">
+        <div class="div2">세번째 방법</div>
+    </a>
+
+    <script>
+        function change()
+        {
+            document.all("div1").innerHTML="첫번째 방법";
+        }
+
+        function change2()
+        {
+            document.getElementById("div1").innerHTML="두번째 방법"
+        }
+    </script>
+</body>
+</html>
