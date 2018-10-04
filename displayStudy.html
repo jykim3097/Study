@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>display study</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body>
+    <h3>display와 visibilty의 차이</h3>
+    <h5>**영어 뜻 </br>
+        display: 표시, 나타냄 -> 요소를 어떻게 표시할 지 선택</br>
+        visibilty: 볼 수 있음 -> 요소를 보일지 말지 결정 </br>
+        **여기서 요소(즉 태그)는 inline, block <br>
+        inline: 줄 속에 넣는 요소 &lt;b&gt;&lt;span&gt;&lt;a&gt; 등 </br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;특정 문자열을 선택할 떄 사용하는 태그, 줄바꿈이 안됨</br>
+        block: 좀 더 넓은 범위를 지정할 때 사용 &lt;p&gt;&lt;h1&gt;&lt;div&gt;&lt;ul&gt;&lt;ol&gt; 등<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;가로 화면 100%차지, 자동으로 앞뒤 줄바꿈이 됨</h5> 
+
+    <h5>display:none<br/>
+        -> 코드가 있는데도 아무것도 표현이 안됨</h5>
+    <div style="background-color: yellow; display:none;">display:none </div>
+    <div style="background-color: green; display:none;">display:none</div>
+    <div style="background-color: tomato; display:none;">display:none</div>
+    
+    <h5>display:inline <br/>
+        -> 기본값으로 요소를 inline 요소처럼 표시, 앞뒤로 줄 바꿈 안됨</h5>
+    <div style="background-color: yellow; display:inline;">display:inline </div>
+    <div style="background-color: green; display:inline;">display:inline</div>
+    <div style="background-color: tomato; display:inline;">display:inline</div>
+    
+    <h5>display:block <br/>
+        -> 요소를 block 요소처럼 표시, 요소 앞 뒤로 줄 바꿈이 됨</h5>
+    <div style="background-color: yellow; display:block;">display:block </div>
+    <div style="background-color: green; display:block;">display:block</div>
+    <div style="background-color: tomato; display:block;">display:block</div>
+    
+    <h5>display:inline-block <br/>
+        -> 요소는 inline인데 내부는 block처럼 표시, 박스 모양이 inline처럼 옆으로 늘어섬<br/>
+    <div style="background-color: yellow; display:inline-block">display:inline-block </div>
+    <div style="background-color: green; display:inline-block">display:inline-block</div>
+    <div style="background-color: tomato; display:inline-block">display:inline-block</div>
+        
+
+</body>
+</html>
