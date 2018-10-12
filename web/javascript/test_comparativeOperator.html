@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>comparative operator</title>
+</head>
+<body>
+    <script>
+        var a = 10;
+        var b = 20;
+        var c = 10;
+        var f = "20";
+        var result;
+
+        result = a>b //false
+        document.write(result,"<br>");
+
+        result = a<b; //true
+        document.write(result,"<br>");
+
+        result = a<=b; //true
+        document.write(result,"<br>");
+
+        result = a!=b; //true
+        document.write(result,"<br>");
+
+        //b랑 f는 자료형은 다르지만 내용은 똑같아서 true
+        result = b == f; //true
+        document.write(result,"<br>");
+        
+        //b랑 f는 자료형이 달라서 false
+        result = b===f; //false
+        document.write(result,"<br>");
+    </script>
+</body>
+</html>

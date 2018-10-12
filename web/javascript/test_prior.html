@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>prior</title>
+</head>
+<body>
+    <script>
+        var a = 10;
+        var b = 20;
+        var m = 30;
+        var n = 40;
+        var result;
+
+        result = ++a*b;
+        document.write(result,"<br>");
+
+        result = a++*b;
+        document.write(result,"<br>");
+        //결과는 똑같음 (왜..?ㅠ)
+
+        result = a>b || b>=m || m>n; //false || false || false
+        document.write(result,"<br>"); //false
+
+        result = a > b || b>=m || m <=n; //false || false || true
+        document.write(result,"<br>"); //true
+
+        result = a<=b && b>=m && m<=n; //true && false && true
+        document.write(result,"<br>"); //false
+
+        result = a<=b && b<=m && m<=n; //true && true && true
+        document.write(result,"<br>"); //true
+
+        result = !(a>b); // !false
+        document.write(result,"<br>"); //true
+    </script>
+</body>
+</html>
