@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       //while문을 사용하여 1~30 사이 숫자 중 2의 배수이면서 6의 배수인 것 찾기
+       var num = 1;
+       while(num<31){
+           if (num%2 == 0){
+               if (num % 6 == 0){
+                   document.write(num,"<br>");
+               }
+           }
+           num++;
+       }
+
+       //중첩문 말고 논리연산자를 써도 됨
+       //if(num%2==0 && num%6==0){
+       //   document.write(num,"<br>");    
+       //}
+       //num++;
+    </script>
+</body>
+</html>

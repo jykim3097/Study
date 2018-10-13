@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       //while문 사용, 20부터 10까지의 숫자 중 짝수일 때는 파란색 출력, 홀수일 때는 빨간색 출력
+       var num = 20;
+
+       while(num>=10){
+           if(num%2==0){
+               document.write("<p style='color:blue'>"+num+"</p>");
+           } else {
+               document.write("<p style='color:red'>"+num+"</p>");
+           }
+           num--;
+       }
+    </script>
+</body>
+</html>

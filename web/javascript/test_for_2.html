@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       //for문 사용, 1~100 사이 숫자 중 
+       //5의 배수일 경우 빨간색 글자, 
+       //7의 배수일 경우 초록색, 
+       //5의 배수이면서 7의 배수 일 때 아쿠아색
+
+       for(var i=1;i<=100;i++){
+           if(i%5==00 && i%7==0){
+                document.write("<p style='color:aqua'>"+i+"</p>");
+           } else if (i%5==0 && i%7!=0){
+                document.write("<p style='color:red'>"+i+"</p>");
+           } else if (i%5!=0 && i%7==0){
+                document.write("<p style='color:green'>"+i+"</p>");
+           }
+       }
+    </script>
+</body>
+</html>
