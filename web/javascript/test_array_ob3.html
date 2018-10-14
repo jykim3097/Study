@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //배열 객체 메소드2
+        var line2 = ["홍대","신촌","이대","시청"];
+        var line3 = ["신사","충무로","을지로3가","대화"];
+
+        line2.splice(2,1,"삼성","강변"); // index 2부터 1개 삭제하고, 삼성, 강변 넣기
+        document.write(line2,"<br>");
+
+        var a1 = line3.pop(); // 맨 마지막 데이터 추출
+        var a2 = line3.shift(); // 맨 앞 데이터 추출
+        document.write(a1,"<br>");
+        document.write(a2,"<br>");
+        
+        line3.push(a2); //맨 뒤에 삽입
+        document.write(line3,"<br>");
+
+        line3.unshift(a1); // 맨 앞에 삽입
+        document.write(line3,"<br>");
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //문자열 객체 메서드와 속성
+        var t="Hello Thank you good luck to you";
+        document.write(t.charAt(16),"<br>"); //16번째 값 반환
+        document.write(t.indexOf("you"),"<br>"); //제일 먼저 발견된 you의 idx 반환
+        document.write(t.indexOf("you",16),"<br>"); //16번째부터 제일 먼저 발견된 you의 idx 반환
+        document.write(t.lastIndexOf("you"),"<br>"); //오른쪽에서 왼쪽 방향으로 제일 먼저 발견된 you의 idx 반환
+        document.write(t.lastIndexOf("you",25),"<br>"); //오른쪽에서 왼쪽 방향으로 25번째부터 제일 먼저 발견된 you의 idx 반환
+        document.write(t.match("luck"),"<br>");
+        document.write(t.search("you"),"<br>");
+        document.write(t.substr(21,4),"<br>"); // 21번째 idx부터 4글자
+        document.write(t.substring(6,12),"<br>"); //6~12번째 idx 
+        document.write(t.replace("you","me"),"<br>"); 
+        document.write(t.toLowerCase(),"<br>");
+        document.write(t.toUpperCase(),"<br>");
+        document.write(t.length,"<br>");
+
+        var s = t.split(" ");
+
+        document.write(s[0],"<br>");
+        document.write(s[4],"<br>");
+
+        var str="A";
+        var t = str.charCodeAt(0); //0번째 idx의 문자의 아스키 코드 값 반환
+        document.write(t,"<br>");
+        document.write(String.fromCharCode(65),"<br>"); //아스키 코드 값 65에 해당하는 문자 출력
+
+        //다 하고 보니 왠지 쓸 때 다 찾아보면서 쓸 듯.. 못외워.. 후..
+    </script>
+</body>
+</html>

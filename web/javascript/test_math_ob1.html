@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Use math object
+        var num = 1.2345;
+
+        var maxNum = Math.max(21,25,90,1,5), //90
+        minNum = Math.min(21,25,90,1,5), //1
+        roundNum = Math.round(num), //반올림
+        floorNum = Math.floor(num), //내림
+        ceilNum = Math.ceil(num), //올림
+        rndNum = Math.floor(Math.random()*11), //0~10 사이의 난수
+        piNum = Math.PI;
+
+        document.write("21,25,90,1,5 중 최대값 : "+maxNum,"<br>");
+        document.write("21,25,90,1,5 중 최소값 : "+minNum,"<br>");
+        document.write("반올림 : "+roundNum,"<br>");
+        document.write("내림 : "+floorNum,"<br>");
+        document.write("올림 : "+ceilNum,"<br>");
+        document.write("난수 : "+rndNum,"<br>");
+        document.write("원주값 : "+piNum);
+    </script>
+</body>
+</html>

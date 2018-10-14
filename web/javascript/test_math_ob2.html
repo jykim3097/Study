@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //난수를 이용한 가위, 바위, 보
+        document.write("<h1>컴퓨터 가위, 바위, 보 맞추기</h1>");
+        var user = prompt("가위, 바위, 보 중 하나를 선택하세요","가위");
+        var num;
+
+        switch(user) {
+            case "가위":
+                num = 1;
+                break;
+            
+            case "바위":
+                num = 2;
+                break;
+
+            case "보":
+                num = 3;
+                break;
+            
+            default:
+                alert("다시 입력해주세요");
+                location.reload();
+        }
+
+        var com = Math.ceil(Math.random()*3);
+
+        if (num == com){
+            document.write("맞췄습니다.");
+        } else {
+            document.write("틀렸습니다.");
+        }
+
+    </script>
+</body>
+</html>
