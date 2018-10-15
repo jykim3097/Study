@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //email 유효성 검사
+        var userEmail = prompt("이메일을 입력해주세요.","");
+        var urlArr = [".co.kr",".com",".net",".or.kr",".go.kr"]; //배열은 {} 아니고, []
+        
+        var check1 = false;
+        var check2 = false;
+
+        if(userEmail.indexOf("@")>0) { //@가 있으면 
+            check1 = true;
+        }
+        for(var i=0;i<urlArr.length;i++){
+            if(userEmail.indexOf(urlArr[i])>0){
+                check2 = true; //urlArr에 있는 형식이 있으면 
+            }
+        }
+
+        if(check1 && check2){ // 둘 다 만족하면 이메일 형식 맞음
+            document.write(userEmail);
+        } else {
+            document.write("이메일 형식이 잘못되었습니다.");
+        }
+    </script>
+</body>
+</html>
