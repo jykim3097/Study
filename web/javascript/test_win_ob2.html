@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>일정 시간 간격으로 값 증감시키기</h1>
+    <p>콘솔 패널에서 확인</p>
+    <button onclick="clearInterval(fn1)">증가 정지</button>
+    <button onclick="clearInterval(fn2)">감소 정지</button>
+    <script>
+        var inc = 0;
+        var dec = 1000;
+
+        var fn1 = setInterval(function() {
+            inc++;
+            console.log("inc: "+inc);
+        }, 3000);
+
+        var fn2 = setInterval(function(){
+            dec--;
+            console.log("dec: "+dec);
+        },3000);
+    </script>
+</body>
+</html>
