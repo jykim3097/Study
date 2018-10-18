@@ -1,6 +1,6 @@
-# Study 
+# Study for programming
 
-## 20180730, Today I learned
+## Today I learned.. 20180730 ~
 
 ### e-learning for github
 * github guide
