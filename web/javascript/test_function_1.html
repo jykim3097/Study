@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var count = 0;
+
+        myFunc();
+
+        function myFunc(){
+            count++;
+            document.write("hello "+count,"<br>");
+        }
+
+        myFunc();
+        //theFunc(); -> 익명 함수는 호이스팅을 적용하지 않기 때문에 오류 발생
+
+        var theFunc = function(){
+            count++;
+            document.write("bye "+count,"<br>");
+        }
+
+        theFunc();
+    </script>
+</body>
+</html>
