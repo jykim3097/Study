@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>파라미터가 있는 함수-2</title>
+</head>
+<body>
+    <script>
+        var rightID = "jykim";
+        var rightPW = "12345";
+
+        function login(id, pw){
+            if(id == rightID){
+                if( pw == rightPW){
+                    document.write("Welcome! "+id,"!<br>");
+                } else{
+                    alert("Please reenter your personal code number.");
+                    location.reload();
+                }
+            } else {
+                alert("Please re-enter your ID.");
+                location.reload();
+            }
+        }
+
+        var userID = prompt("Please enter your ID.");
+        var userPW = prompt("Please enter your password.");
+
+        login(userID, userPW);
+    </script>
+</body>
+</html>

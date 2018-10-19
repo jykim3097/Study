@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>function6</title>
+    <script>
+        var count = 1;
+        function rect(number){
+            if (number) {
+                if (count == 4) return;
+                count++;
+            } else {
+                if(count == 1) return;
+                count--;
+            }
+
+            var rectTag = document.getElementById("rect");
+            switch(count){
+                case 1 :
+                    rectTag.style.backgroundColor ="blue"; //rectTag.css(~) 이거는 jquery 문법인듯
+                    break;
+                case 2 :
+                    rectTag.style.backgroundColor ="red";
+                    break;
+                case 3 :
+                    rectTag.style.backgroundColor ="aqua";
+                    break;
+                case 4 :
+                    rectTag.style.backgroundColor ="purple";
+                    break;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="rect" style="width: 600px; height: 600px; background-color: blue;"></div>
+    <p>
+        <button onclick="rect(0)">이전</button>
+        <button onclick="rect(1)">다음</button>
+    </p>
+</body>
+</html>
