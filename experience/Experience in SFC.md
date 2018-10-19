@@ -15,6 +15,7 @@ So, I write down what I wrote yesterday, even briefly.
 ### He said,
 
 * If the world of online matches offline, we need a new economic concept.
+
   And that is the Fourth Industrial Revolution.
 
 * He is studying a brainwave hat, which is changed pattern if thinking is changed.
