@@ -32,8 +32,6 @@ So, I write down what I wrote yesterday, even briefly.
   The gap between the rich and the poor in technology will widen.
   So we have to think about what humans have to do in such a world.
 
-  
 
-  
 
   ...continue...
