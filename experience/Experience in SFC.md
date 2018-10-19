@@ -22,9 +22,7 @@ So, I write down what I wrote yesterday, even briefly.
   And in his laboratory, there is a robot that move as person thinks.
 
   The robot moves 93 times out of 100 without hitting the wall.
- 
- I was surprised to hear this, because I felt that the age of robots would come faster.
-
+  I was surprised to hear this, because I felt that the age of robots would come faster.
   He said it meant that jobs would disappear even further.
 
   As AI only contributes to "production" not "consumption". I nodded.
@@ -32,8 +30,7 @@ So, I write down what I wrote yesterday, even briefly.
   This means that capitalism is shaken.
 
   The gap between the rich and the poor in technology will widen.
- 
- So we have to think about what humans have to do in such a world.
+  So we have to think about what humans have to do in such a world.
 
   
 
