@@ -6,8 +6,9 @@
 * github guide
 
 ### android
+* kakao login API
 
 ### server
-* kakao login api
+* kakao login API
 
 ### javascript
