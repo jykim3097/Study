@@ -2,7 +2,6 @@ package com.example.ramy.kakaologintest;
 
 import android.app.Application;
 import com.kakao.auth.KakaoSDK;
-import com.example.ramy.kakaologintest.KakaoSDKAdapter;
 
 public class GlobalApplication extends Application {
     private static GlobalApplication instance;

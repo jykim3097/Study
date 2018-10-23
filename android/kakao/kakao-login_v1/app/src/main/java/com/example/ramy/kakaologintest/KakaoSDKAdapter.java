@@ -6,14 +6,14 @@ import com.kakao.auth.AuthType;
 import com.kakao.auth.IApplicationConfig;
 import com.kakao.auth.ISessionConfig;
 import com.kakao.auth.KakaoAdapter;
-import com.example.ramy.kakaologintest.GlobalApplication;
 
 public class KakaoSDKAdapter extends KakaoAdapter {
 
     // 로그인 시 사용 될, Session의 옵션 설정을 위한 인터페이스 입니다.
+    // Session은 로그인 객체를 유지 시키는 객체로 Access Token을 관리하는 역할
     @Override
     public ISessionConfig getSessionConfig() {
-        return new ISessionConfig() {
+        return new ISessionConfig() { //Session에 대한 옵션 값들을 설정
 
             // 로그인 시에 인증 타입을 지정합니다.
             @Override

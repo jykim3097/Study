@@ -23,9 +23,9 @@ public class SessionCallback implements ISessionCallback {
     }
 
     // 사용자 정보 요청
-    public static void requestMe() {
+    public void requestMe() {
         // 사용자정보 요청 결과에 대한 Callback
-        UserManagement.requestMe(new MeResponseCallback() {
+        UserManagement.getInstance().requestMe(new MeResponseCallback() {
 
             // 세션 오픈 실패. 세션이 삭제된 경우,
             @Override
@@ -43,7 +43,6 @@ public class SessionCallback implements ISessionCallback {
             @Override
             public void onSuccess(UserProfile userProfile) {
                 Log.e("SessionCallback :: ", "onSuccess");
-
                 String nickname = userProfile.getNickname();
                 String email = userProfile.getEmail();
                 String profileImagePath = userProfile.getProfileImagePath();
@@ -58,8 +57,6 @@ public class SessionCallback implements ISessionCallback {
                 Log.e("Profile : ", UUID + "");
                 Log.e("Profile : ", id + "");
             }
-
-
 
             // 사용자 정보 요청 실패
             @Override
