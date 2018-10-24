@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>test1</title>
+    <script>
+        function colorChange() {
+            var colorArr = ["#ff0","f6c0","#fcf","#cf0","#39f"];
+            var randomNum = Math.floor(Math.random()*colorArr.length);
+            var bodyTag = document.getElementById("body");
+            bodyTag.style.backgroundColor = colorArr[randomNum];
+        }
+    </script>
+</head>
+<body id="body">
+    <button onclick="colorChange();">배경 색 바꾸기</button>
+</body>
+</html>
