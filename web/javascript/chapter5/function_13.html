@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>test2</title>
+    <script>
+        function Score(name, korean, english){
+            this.userName = name;
+            this.userKorean = korean;
+            this.userEnglish = english;
+
+            this.getTestInfo = function() {
+                document.write("이름 : "+ name,"<br>");
+                document.write("국어점수 : "+ korean,"<br>");
+                document.write("영어점수 : "+ english,"<br>");
+            }
+
+            this.getAvg = function() {
+                return (korean+english)/2;
+            }
+        }
+
+        var jy = new Score("지영",90,100);
+        var hc = new Score("현채",100,90);
+
+        jy.getTestInfo();
+        document.write("평균 점수 : "+jy.getAvg(),"<br>");
+
+        hc.getTestInfo();
+        document.write("평균 점수 : "+hc.getAvg(),"<br>");
+    </script>
+</head>
+<body>
+</body>
+</html>
