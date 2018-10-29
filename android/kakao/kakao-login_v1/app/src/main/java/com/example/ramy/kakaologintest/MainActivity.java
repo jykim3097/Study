@@ -1,28 +1,15 @@
 package com.example.ramy.kakaologintest;
 
 import android.content.Context;
-
 import android.content.pm.PackageInfo;
-
 import android.content.pm.PackageManager;
-
 import android.content.pm.Signature;
-
 import android.support.annotation.Nullable;
-
 import android.support.v7.app.AppCompatActivity;
-
 import android.os.Bundle;
-
 import android.util.Base64;
-
 import android.util.Log;
-
-
-
 import java.security.MessageDigest;
-
-
 
 public class MainActivity extends AppCompatActivity {
     private Context mContext;

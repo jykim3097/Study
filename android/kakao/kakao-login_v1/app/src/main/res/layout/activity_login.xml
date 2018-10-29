@@ -8,11 +8,17 @@
     android:orientation="vertical"
     tools:context="com.example.ramy.kakaologintest.LoginActivity">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/logo"
+        android:src="@drawable/splash"/>
     <Button
         android:id="@+id/btn_custom_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorAccent"
-        android:text="카카오 로그인" />
+        android:text="@string/kakao_login"
+        android:textColor="#9a9c9e"
+        android:background="@android:color/transparent"/>
 
 </LinearLayout>

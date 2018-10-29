@@ -1,5 +1,7 @@
 package com.example.ramy.kakaologintest;
 
+import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import com.kakao.auth.ISessionCallback;
 import com.kakao.network.ErrorResult;
@@ -44,14 +46,14 @@ public class SessionCallback implements ISessionCallback {
             public void onSuccess(UserProfile userProfile) {
                 Log.e("SessionCallback :: ", "onSuccess");
                 String nickname = userProfile.getNickname();
-                String email = userProfile.getEmail();
+                //String email = userProfile.getEmail();
                 String profileImagePath = userProfile.getProfileImagePath();
                 String thumnailPath = userProfile.getThumbnailImagePath();
                 String UUID = userProfile.getUUID();
                 long id = userProfile.getId();
 
                 Log.e("Profile : ", nickname + "");
-                Log.e("Profile : ", email + "");
+                //Log.e("Profile : ", email + "");
                 Log.e("Profile : ", profileImagePath  + "");
                 Log.e("Profile : ", thumnailPath + "");
                 Log.e("Profile : ", UUID + "");

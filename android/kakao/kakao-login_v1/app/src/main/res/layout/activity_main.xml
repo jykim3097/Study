@@ -8,11 +8,16 @@
     android:orientation="vertical"
     tools:context="com.example.ramy.kakaologintest.LoginActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="로그인 성공"/>
     <Button
-        android:id="@+id/btn_custom_login"
+        android:id="@+id/btn_custom_logout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorAccent"
-        android:text="카카오 로그인" />
+        android:text="로그아웃"
+        android:textColor="#9a9c9e"
+        android:background="@android:color/transparent"/>
 
 </LinearLayout>
