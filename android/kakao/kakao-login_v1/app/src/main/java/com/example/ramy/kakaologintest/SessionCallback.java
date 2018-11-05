@@ -3,6 +3,8 @@ package com.example.ramy.kakaologintest;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
+import android.widget.Button;
+
 import com.kakao.auth.ISessionCallback;
 import com.kakao.network.ErrorResult;
 import com.kakao.usermgmt.UserManagement;
