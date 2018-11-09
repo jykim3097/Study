@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>자식 요소 선택자</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+        $(function(){
+            $("#wrap > h1").css("border","2px dashed #ff0");
+            $("#wrap > section").children().css({"background-color":"yellow","border":"2px dashed #f00"});
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>인접 관계 선택자</h1>
+        <p>내용1</p>
+        <!-- section 태그는 무슨 역할이지? 자식 태그 각각에 따로 css가 설정됨 -->
+        <section>
+            <h1>자식 요소 선택자</h1>
+            <p>내용2</p>
+        </section>
+    </div>
+</body>
+</html>
