@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>형/동생 요소 선택자</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+        $(function(){
+            var style1 = {
+                "background-color":"#0ff",
+                "border":"2px solid #f00"
+            }
+            var style2 = {
+                "background-color":"#ff0",
+                "border":"2px dashed #f00"
+            }
+
+            $(".txt2").prev().css(style1); //-> 내용1
+            $(".txt2 + p").css(style2); //->내용3
+            $(".txt2").next().next().css(style2); //-> 내용2의 다음다음
+        })
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>인접 관계 선택자</h1>
+        <p>내용1</p>
+        <p class="txt2">내용2</p>
+        <p>내용3</p>
+        <p>내용4</p>
+    </div>
+</body>
+</html>
