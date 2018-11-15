@@ -10,5 +10,10 @@
 
 ### server
 * kakao login API
+* Attempt php -> x
+* Attempt spring -> ~ing
 
 ### javascript
+
+### bigdata
+* crawling data
