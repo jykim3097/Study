@@ -2,7 +2,7 @@
 
 * php를 해보려다가 spring을 써보는 게 더 좋을 것 같아서 바꾸기로 함
 
-# Spring 설치하면서..
+# Spring 설치하면서.. (밑에 재설치함)
 
   * https://www.popit.kr/%EC%8B%A0%EC%9E%85-%EA%B0%9C%EB%B0%9C%EC%9E%90-%ED%95%99%EC%83%9D%EC%9D%84-%EC%9C%84%ED%95%9C-spring-mvc-setting-1%ED%8E%B8
 
@@ -60,4 +60,36 @@
 
   * 흠 그래도 에러뜨는 거 같은데.. 계속 그러면 원래대로 바꿔야겠다.
 
-  * 
+
+
+ # 재설치(18.11.19)
+
+  * http://all-record.tistory.com/154
+
+    -> 이 사이트 보고 다시 설치하기로 함
+
+  * 이번에는 sts 사이트에 가서 sts를 다운로드
+
+  * 다운받은 압축 파일 명: spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32-x86_64 
+
+    -> 경로 길이가 너무 길다는 에러가 떠서 수정했음
+
+    -> 또 떠서 C드라이브에 넣고 다시 압축 풀기...
+
+  * java 버전 1.6->1.8, spring 버전 3.1.1->5.1.2으로 수정
+
+    -> 수정하는 이유가 폴더에 x가 떠서 그런다는데, 나는 x 안뜨고... 수정해도 폴더에 물음표가 남아있다..
+
+    -> 나는 git 경로에 올려놓은 거였는데 commit 하지 않아서 물음표가 생긴다고 한다!! 완전 신기!!
+
+  * 프로젝트 이름에서 우클릭하고 Properties를 클릭 > Project Facets 의 java의 버전을 1.8로 변경!
+
+  * home.jsp 를 run하면 404에러가 뜬다. -> HomeController.java를 run 해야 함
+
+    -> HomeController.java를 실행시키면 home이라는 string을 리턴시키고 이 값이 
+        /WEB-INF/views/  뒤에  붙고 .jsp도 붙여줘서 home.jsp 파일이 실행되는 것이다.
+
+  * 실행된 파일은 인코딩이 안되어 있으니 다음 코드를 home.jsp에 추가해준다.
+
+    -> <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
