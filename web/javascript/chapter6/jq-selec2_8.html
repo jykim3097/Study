@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>$.map()/$.grep() method</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+        $(function(){
+            var arr1=[{
+                "area":"서울",
+                "name":"정현자"
+            },{
+                "area":"부산",
+                "name":"연수이모"
+            },{
+                "area":"이천",
+                "name":"찌양"
+            },{
+                "area":"남양주",
+                "name":"개양"
+            }]
+
+            var arr2 = $.map(arr1,function(a,b){ //a가 배열 값, b가 인덱스
+                if(a.area == "서울"){
+                    return a;
+                }
+            });
+            console.log(arr2);
+            console.log("=====first End=====");
+
+            var arr3 = $.map(arr1,function(a,b){ //서울인 거는 true, 서울이 아닌 거는 false로 새로운 배열 만들기
+                if(a.area=="서울"){
+                    return true;
+                } else {
+                    return false;
+                }
+            });
+            console.log(arr3);
+            console.log("=====Second End=====");
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>
