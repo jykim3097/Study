@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>attr()/removeAttr() method</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+        $(function(){
+            $("#rec").css({
+                "width":"500px",
+                "height":"600px",
+                "border":"3px solid skyblue",
+                "text-align":"center"
+            });
+            var recVal = $("#rec").attr("width");
+            console.log(recVal);
+
+            //$("#rec").attr({"width":200}).removeAttr("background-color");
+        });
+    </script>
+</head>
+<body>
+   <div id="rec" style="background:bisque">  
+       Merry Dicember~!
+   </div>
+</body>
+</html>
