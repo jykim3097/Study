@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>addClass()/removeClass()/toggleClass()/hasClass() method</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+        $(function(){
+            $("#p1").addClass("aqua"); //class 추가
+            $("#p2").removeClass("red"); //class 제거
+            $("#p3").toggleClass("green"); //class 없으면 추가
+            $("#p4").toggleClass("green"); //class 있으면 삭제
+            $("#p6").text($("#5").hasClass("yellow")); //true or false
+        });
+    </script>
+</head>
+<body>
+   <p id="p1">p1</p>
+   <p id="p2" class="red">p2</p>
+   <p id="p3">p3</p>
+   <p id="p4" class="green">p4</p>
+   <p id="p5" class="yellow">p5</p>
+   <p id="p6">p6</p>
+</body>
+</html>
