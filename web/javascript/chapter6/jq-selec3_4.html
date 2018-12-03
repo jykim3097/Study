@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>val() method</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+        $(function(){
+           var result_1 = $("#user_name").val();
+           console.log(result_1); //jy
+
+           $("#user_id").val("javascript"); //value를 javascript로 바꿔줌
+
+           var result_2 = $("#user_id").prop("defaultValue");
+           console.log(result_2); //.prop("defaultValue")를 써서 초기값 hello를 보여줌
+        });
+    </script>
+</head>
+<body>
+   <h1>객체 조작 및 생성</h1>
+   <form action="#" id="form_1">
+       <p>
+           <label for="user_name">이름</label>
+           <input type="text" name="user_name" id="user_name" value="jy">
+       </p>
+       <p>
+           <label for="user_id">아이디</label>
+           <input type="text" nmae="user_id" id="user_id" value="hello"> 
+       </p>
+   </form>
+</body>
+</html>
