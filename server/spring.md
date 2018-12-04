@@ -65,7 +65,7 @@
 
   -> 이 mapper에 접근하는 경로 추가
 
-  -> <property name="mapperLocation" value="classpath:mappers/**/*Mapper.xml"></property>
+  -> <property name="mapperLocations" value="classpath:mappers/**/*Mapper.xml"></property>
 
 - SqlSessionTemplate 추가
 
@@ -78,3 +78,146 @@
 - src/main/resources 아래에 log4jdbc.log4j2.properties 와 logback.xml 파일을 생성한다. 
 
 - error 500.. ㅎㅎㅎ 오늘은 여기까지..
+
+- mysql connector java 버전을 바꿔서 해결했지만 500 에러가 떠서 다시 원래대로 되돌려놨더니 404 에러가 뜬다..
+
+
+#404 에러 해결하기
+
+1. java build path > source > add folder > webapp --> 안됨
+
+2. web project settings > / 로 바꿔줌 --> 안됨..!
+
+  -> 경로 설정을 바꿔줬는데 왜 그대로지..?
+
+
+#181204 3번째 새 프로젝트...(후)
+
+* 톰캣 에러가 도저히 해결되지 않아서 다시 차근차근 해보기로 했다..
+
+1 새 프로젝트를 만든다(스프링 mvc 프로젝트)
+
+  -> sample project를 만들고, pom.xml 에서 java(1.8)와 spring(4.3.3) 버전을 수정한다.
+
+  -> 프로젝트 이름에서 마우스 우클릭> properties > project facts 에서 java 버전을 1.8로 바꿔주고 apply한다.
+
+  -> 여기까지 프로젝트 설정 끝!
+
+  -> 에러 뜨면 spring 버전을 바꿔줘야 함
+
+1.5 이클립스  UTF-8로 인코딩하기
+
+     * windows > preferences > general > workspace > 맨 아래 other > utf-8로 변경 > apply
+
+     * windows > preferences > web > css files > encoding > ISO 10646/Unicode(UTF-8)로 변경 > apply
+
+     * windows > preferences > web > html files > encoding > ISO 10646/Unicode(UTF-8)로 변경 > apply
+
+     * windows > preferences > web > JSP files > encoding > ISO 10646/Unicode(UTF-8)로 변경 > apply
+
+     * windows > preferences > general > content types > text 누른 후 맨 아래 default encoding을 UTF-8로 update
+
+     >> apply and close
+
+2 톰캣 연동하기!!!!
+
+  -> 아래 server tab에서 마우스 우클릭 > new > server > apache tomcat v8.5 server 선택 
+
+  -> jre에서 jdk 설정 > next > 프로젝트 선택 후 finish
+
+3. 스프링 mvc 프로젝트 실행
+
+  -> 프로젝트 이름에서 우클릭 > run as > run on server > 설치한 톰캣 선택 후 finish
+
+  -> hello world가 뜬다 > 근데 인코딩 에러
+
+  -> src 아래 ~~~ home.jsp를 찾아서 아래 코드 추가
+
+      <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+  -> 다시 run on server 하면 글자가 깨지지 않고 뜬다
+
+4. mysql 깔기 -> 이전에 깔았던 것 다 삭제하고 다시 깔기
+
+  -> https://dev.mysql.com/downloads/file/?id=480823 여기 들어가서 window web-community 버전으로 다운 받음
+
+  -> 설치 시작 > access > developer default > 경고창은 yes > execute
+
+  -> 왜 workbench와 connector/odbc ... 설치 failed 뭐 어째야되는 거지 ㅎㅅㅎ..
+
+  -> 잘 넘어가긴 함..(불안) -> 포트 번호 3306인 거 확인하고 넘어가기 > 비번 설정 > 계속 시키는 대로 next
+
+  -> mysql command line 창에서 비번 입력하고 들어가지면 설치 끝!
+
+5. HeidiSQL과 연결하기
+
+  -> heidiSQL caching_sha2_password 에러 또 뜸
+
+  -> mysql command line 창에서 아래 코드 입력
+
+  -> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '초기설정 비밀번호';
+
+=> 개발 환경 설정 완료!
+
+6. 스프링, MySQL, MyBatis 연동
+
+  -> pom.xml > dependencies 탭에서 add
+
+  -> <dependency>
+	<groupId>mysql</groupId>
+	<artifactId>mysql-connector-java</artifactId>
+	<version>6.0.5</version>
+      </dependency>
+      <dependency>
+	<groupId>org.mybatis</groupId>
+	<artifactId>mybatis</artifactId>
+	<version>3.4.1</version>
+	</dependency>
+     <dependency>
+	<groupId>org.mybatis</groupId>
+	<artifactId>mybatis-spring</artifactId>
+	<version>1.3.0</version>
+     </dependency>
+     <dependency>
+	<groupId>org.springframework</groupId>
+	<artifactId>spring-jdbc</artifactId>
+	<version>${org.springframework-version}</version>
+     </dependency>
+     <dependency>
+	<groupId>org.springframework</groupId>
+	<artifactId>spring-test</artifactId>
+	<version>${org.springframework-version}</version>
+     </dependency>
+
+  -> junit 버전 4.12로 수정
+
+  -> root-context.xml은 웹과 관련되지 않은 자원들에 대한 설정을 입력하는 곳
+
+  -> root-context.xml > namespaces tab > aop, context, jdbc, mybatis-spring 체크
+
+  -> 사용 가능한 XML 태그의 폭을 넓혀주기 위한 설정
+
+  -> root-context > source > DataSource와 SqlSessionFactoryBean을 설정한다
+
+  -> DataSource는 MySQL과 연결 담당, JDBC 커넥션 처리 기능을 가지고 있어서 DB 연동 작업에 반드시 필요
+
+  -> SqlSessionFactoryBean은 DB와의 연결, SQL의 실행에 대한 모든 것을 가진 객체
+
+  -> 지금은 연동 테스트를 위해 간단히 입력, 나중에 DB를 연결해 데이터 저장, 수정, 삭제, 조회 할 때 코드 추가할 것
+
+  -> src/test/java 밑에 생성되어 있는 패키지 아래 두 가지 클래스를 추가한다.
+
+  -> MyBatisTest.java, MySQLConnectionTest.java 입력 > run as > junit test > junit initializaionError.. gg
+
+  -> 오 알고보니 junit library를 추가하지 않았었다..! (바보)
+
+  -> 프로젝트 이름 우클릭 > properties > java build path > libraries tab > add library > junit > junit4 선택 -> 해결!
+
+  -> 한번에 되면 좋겠지만 ~ 역시나~
+
+  -> Unknown system variable 'query_cache_size'
+
+  -> pom.xml에서 mysql-connector-java 버전을 8.0.11로 바꿔서 해결!했었는데... 해결해도 되는 것인가.....
+
+  -> 구글링에서 나오는 해결방법은 이거 뿐인데.. 이 에러 왜 뜨는 거지
+
