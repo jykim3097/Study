@@ -1,0 +1,90 @@
+﻿181123
+무중력 상태에서 떠돌아다니게 하지 않게 하기 위해 isKinematic을 체크
+게임의 최적화를 위해 isKinematic을 체크함
+
+mesh 콜리더 -> 모양 그대로의 외곽을 잡아줌
+
+181128
+- 캔디통 위에 콜리더가 있어서 범위가 제한적인 거
+- 클론이 많아지면 리소스가 많아져 느려짐
+  -> new는 했는데 delete가 없어서 -> 만들어주자
+- is Trigger -> candy 태그를 인식해서 부딪힌 걸 인식
+
+public class CandyDestroyer : MonoBehaviour {
+	//TAG를 인식해주는 함수
+	void OnTriggerEnter(Collider other){  // other에는 candy가 들어갈 것
+		if (other.gameObject.tag == "Candy") {
+			Destroy (other.gameObject);
+		}
+	}
+}
+
+-> is Trigger가 부딪히면 Candy라는 걸 인식
+-> 안없어지는 clone은 위에 얹혀있는 캔디
+
+- 공 투척 수를 제한해줘야함
+
+public class CandyHolder : MonoBehaviour {
+	//변하지 않는 변수
+	const int DefaultCandyAmount = 30;
+
+	// 현재의 사탕 투척 기회 수, 변하는 변수 -> 은닉성을 위해서 만들어줌
+	int candy = DefaultCandyAmount;
+
+}
+
+
+- 캔디가 앞으로 떨어지면 새로 던질 수 있게 해줌
+- 하나의 스크립트로 두가지 오브젝트에 효과를 줌 -> 게임 프로그래밍이라고 함
+
+- 일정 시간이 되면 충전이 되게
+
+- 함수를 어디에 넣을까 고민해야함!
+  비슷한 함수들은 같은 클래스에 넣어놓고
+  비슷한 함수더라도 다른 오브젝트에서 하면 
+
+- StartCoroutine : 병렬 처리 함수
+  -> 일정 시간 이후에 처리해야할 함수가 있을 때 써 줌
+  -> IEnumerator 반환 값이 있는 함수가 들어가야함
+
+- property: c#에서 제공해주는 새로운 타입의 구조체
+  -> 예인 메모장에서 프로퍼티 읽어봐
+
+- 연속 투입 안되게
+
+- 파티클 시스템 만들기
+  -> 앞으로 떨어졌을 때 효과 
+  -> particle system
+  -> 모바일 게임엔 모바일 파티클!
+  -> particle system 인스펙터에서 shader>mobile>particles>additive
+
+
+181206
+- auto destroy effect : 듀레이션을 주고 ..
+
+- candy destroyer script
+  -> 캔디가 소멸할 때 파티클이 나오도록 하는 것
+  -> 앞으로 떨어진 것만 reward를 받으니까 파티클은 앞으로 떨어지는 캔디에만!
+
+- instantiate (객체, 트랜스폼, 로테이션) 이렇게 들어가야햠
+
+- 음향(sound)
+- 로드 타입 -> 압축해서 로드할 것이냐~
+- compression format -> 압축을 어떤 식으로 할 것인가
+- sample rate setting -> 보통의 노래는 파일 하나여서 끊어가면서 sampling 할 때 필요 -> 우리는 아니야
+- 메인 카메라 -> 계속 켜져있는 오브젝트 -> 카메라에 BGM.ogg를 드래그앤 드랍 해준다
+- 슈터 음향도 슈터 자체에 넣어줄 수 있지만 그러면 한번만 울린다던가 계속 roop
+  -> 터치를 받는 애고, 생성되는 객체가 아니기 때문에
+- 한 번 가져오기만 하면 되는 거 -> start 함수에서 설정해주자!
+  -> update에서 가져오면 낭비가 됨 (최적화(발열 방지)를 위해)
+- shotSound.Play (); -> 유니티에서 제공해주는 오디오
+  -> consumePower 안에 넣으면 
+- shot 파일을 shooter에 드래그앤드랍 -> play on awake 체크를 해제하면 처음에 소리가 안남
+- 캔디가 떨어지는 순간 오디오소스가 동적으로 생성 객체 스타일로 겟이펙트에 샷 음향을 붙여줌
+
+- shooter에서는 awake를 꺼주고, getEffect에서는 awake를 켜줌
+- shooter에서는 start가 있으니까!
+- play a awake > getEffect가 생성되면 실행
+- scene에 뭘 생성한 경우에는 apply, project에서 하면 apply 안해줘도 됨
+- 파티클 효과가 자동 사라지니까 loop를 돌려도 말쨩!
+
