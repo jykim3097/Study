@@ -1,4 +1,4 @@
-﻿#query_cache_size error
+﻿# query_cache_size error
 
   Unknown system variable 'query_cache_size'
 

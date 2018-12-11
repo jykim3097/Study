@@ -2,9 +2,9 @@
 
 ### Unknown system variable 'query_cache_size' 에러 해결 
 
--> [Unknown system variable 'query_cache_size']
+-> server/errorCollection/Unknown system variable 'query_cache_size' 참고
 
--> [visual studio 2015 x86 redistributable installation error]
+->  server/errorCollection/visual studio 2015 x86 redistributable installation error 참고
 
 -> 에러를 몇 일간 해결하다보니 뭘하던 건지를 까먹음 ㅇㅅㅇ///..
 

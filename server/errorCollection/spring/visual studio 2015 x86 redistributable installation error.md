@@ -1,4 +1,4 @@
-﻿#visual studio 2015 x86 redistributable 설치 에러
+﻿# visual studio 2015 x86 redistributable 설치 에러
 
 * visual studio 2015 재배포 버전을 설치하라고 했는데.. 그냥 2017 버전 설치했고.. 안되고.. 후
 
@@ -18,6 +18,6 @@
 
   -> 2017 버전이 하위호환이 돼서 2015 버전 설치를 차단하는 거였음..
 
-** 참고가 된 사이트
+### [참고가 된 사이트]
 
 https://social.msdn.microsoft.com/Forums/sqlserver/en-US/72da6400-7a22-4bcc-b8d3-6423086289f0/visual-c-2015-redistributable-setup-failed-0x80070666-x64-amp-x86?forum=vssetup
