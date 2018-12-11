@@ -1,6 +1,6 @@
-﻿#181210
+﻿# 181210
 
-###Unknown system variable 'query_cache_size' 에러 해결 
+### Unknown system variable 'query_cache_size' 에러 해결 
 
 -> [Unknown system variable 'query_cache_size']
 
@@ -8,7 +8,7 @@
 
 -> 에러를 몇 일간 해결하다보니 뭘하던 건지를 까먹음 ㅇㅅㅇ///..
 
-##스프링, MySQL, MyBatis 연동 전체적인 정리
+## 스프링, MySQL, MyBatis 연동 전체적인 정리
 
 * maven : 자바용 프로젝트 관리 도구 -> 라이브러리 추가가 쉬워짐
 
