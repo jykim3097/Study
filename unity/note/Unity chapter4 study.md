@@ -22,6 +22,7 @@
 
 - 스크립트가 활성화 되어 있을 때 매 **프레임마다** 호출되고, 주기가 일정하지 않다.
 
+
 #### 1.2.2 LateUpdate()
 
 - 스크립트가 활성화 되어 있을 때 매 프레임마다 호출된다.
@@ -30,11 +31,13 @@
 
 - object를 따라다니는 카메라를 생각하면 되는데, Update에서 오브젝트가 움직인 뒤 LateUpdate에서 카메라가 오브젝트를 따라간다.
 
+
 #### 1.2.3 FixedUpdate()
 
 - 일정한 주기를 갖고 호출된다 -> Fixed Timestep에 따라
 
 - 리지드바디로 스크립트를 짤 때 보통 이 함수를 통해 움직임
+
 
 #### 1.3 Time 함수
 
@@ -42,13 +45,14 @@
 
 - Time.time은 게임이 시작되고 나서부터의 초를 float 값으로 얻을 수 있다.
 
+
 #### 1.4 Transform의 position 멤버의 변경
 
 - Transform의 position과 localPosition의 값은 Vector3의 형식. -> 구조체의 프로퍼티로 정의되어 있어서 멤버 변수를 직접 변경할 수 없다.
 
-```
-transform.position.x = 100;
-```
+  ```
+  transform.position.x = 100;
+  ```
 
 - Transform의 position의 x, y 값을 변경하려면 **(1)임시 변수에 값을 복사**하거나 **(2)새로운 Vector3를 작성**해야한다.
 
@@ -73,6 +77,7 @@ transform.position.x = 100;
   ```
 
 - 이런 함수는 position뿐만 아니라 rotation이나 scale에 관해서도 마찬가지
+
 
 #### 2. TIP
 
