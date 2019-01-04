@@ -108,4 +108,10 @@ log4jdbc.spylogdelegator.name=net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator
 
 - 이 클래스는 SqlSession을 받아 memberMapper.xml에 등록한 쿼리문을 실행한다.
 
-- 쿼리 결과가 여러개의 데이터를 가져오니까 list로 받아서 리턴한다.
+- 쿼리 결과가 여러개의 데이터를 가져오니까 **list로 받아서 리턴**한다. ( return type이 리스트)
+```
+public List<MemberVO> selectMember() throws Exception {
+ 
+        return sqlSession.selectList(Namespace+".selectMember");
+    }
+```
