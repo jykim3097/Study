@@ -127,5 +127,5 @@ sysinfo.txt
 *.unitypackage
 
 # resources
-Resources/
+RPS_Resources/
 *.meta
