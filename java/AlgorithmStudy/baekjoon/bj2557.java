@@ -1,6 +1,6 @@
 package bj2557;
 
-public class Main {
+public class bj2557 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

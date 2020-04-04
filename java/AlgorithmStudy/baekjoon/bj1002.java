@@ -3,7 +3,7 @@ package bj1002;
 import java.util.Scanner;
 import java.util.Arrays;
 
-public class Main {
+public class bj1002 {
 
 	public static void main(String[] args) {
 		
