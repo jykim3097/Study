@@ -14,5 +14,7 @@ public class _1_11654 {
 		char c = m.charAt(0);
 		
 		System.out.println((int)c);
+		
+		scan.close();
 	}
 }

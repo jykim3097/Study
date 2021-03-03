@@ -34,5 +34,6 @@ public class _4_2675 {
 			}
 			System.out.println(s);
 		}
+		scan.close();
 	}
 }
