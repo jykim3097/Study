@@ -1,6 +1,8 @@
-# Study for programming
+# Study for programming 20180730 ~
 
-## Today I learned.. 20180730 ~
+### java
+* algorithm (almost baekjoon)
+* academy 20210215~
 
 ### e-learning for github
 * github guide
