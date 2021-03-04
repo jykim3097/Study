@@ -1,21 +1,24 @@
-# Study for programming 20180730 ~
+## Study for programming 20180730 ~
 
 ### java
 * algorithm (almost baekjoon)
+* LifeCoding (생활코딩 자바 입문 수업)
 * academy 20210215~
 
-### e-learning for github
-* github guide
+### javascript
+
+### unity
+* 2019 project
+* StrangeRPS
 
 ### android
 * kakao login API
 
 ### server
 * kakao login API
-* Attempt php -> x
-* Attempt spring -> ~ing
-
-### javascript
 
 ### bigdata
 * crawling data
+
+### e-learning for github
+* github guide
