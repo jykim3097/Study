@@ -8,6 +8,7 @@ public class Store1 extends ParentStore {
 	 * 2. 오버라이딩 - 보통 많이 쓴다
 	 */
 	
+	//생성자를 통해 추상 클래스의 객체 생성
 	Store1(){
 		super();
 	}

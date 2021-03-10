@@ -10,8 +10,8 @@ public class Person {
 	 */
 
 	public final String nation = "대한민국"; //직접초기화
-	public String ssn;
 	
+	public String ssn;
 	public final String name;
 	
 	public Person(String ssn, String name) {

@@ -27,7 +27,7 @@ public class Basic {
 	//상속 관계가 없다면 다형성 적용 불가능
 	//C c1 = new D();
 	
-	//모든 클래스는 object의 자식클래스이기 때문에 object형에는 모든 다입을 저장할 수 있다.
+	//모든 클래스는 object의 자식클래스이기 때문에 object형에는 모든 타입을 저장할 수 있다.
 	Object o = a;
 	Object o2 = "문자열";
 	Object o3 = 1;

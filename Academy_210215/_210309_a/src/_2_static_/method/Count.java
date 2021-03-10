@@ -2,7 +2,7 @@ package _2_static_.method;
 
 public class Count {
 
-	public int a; //일반 변수는 객체가 생성할 때 만들어지고
+	public int a; //일반 변수는 객체를 생성할 때 만들어지고
 	public static int b; //정적 멤버 변수, static은 클래스가 생성될 때 다 만들어진다.
 	
 	//일반메서드 - 일반 멤버 변수, 정적 멤버 변수 모두 사용 가능
@@ -18,6 +18,7 @@ public class Count {
 		
 		Count c = new Count();
 		c.a = 10;
+		System.out.println("c.a =  " + c.a);
 		
 		return b++;
 	}

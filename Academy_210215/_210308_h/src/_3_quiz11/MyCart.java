@@ -1,7 +1,5 @@
 package _3_quiz11;
 
-import java.util.Arrays;
-
 public class MyCart {
 
 	// 1. 모든 멤버변수와 메서드에 적절한 접근제한자를 선언하세요
