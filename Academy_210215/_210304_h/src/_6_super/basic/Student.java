@@ -1,4 +1,4 @@
-package _6_super_.basic;
+package _6_super.basic;
 
 public class Student extends Person {
 

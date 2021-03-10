@@ -1,4 +1,4 @@
-package _4_this_.basic;
+package _4_this.basic;
 
 public class Student extends Person {
 
