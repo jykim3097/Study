@@ -2,6 +2,8 @@ package _1_api.lang.str;
 
 import java.util.Arrays;
 
+import _2_quiz16.StrQuiz04_1;
+
 public class MainClass {
 
 	public static void main(String[] args) {
@@ -74,5 +76,7 @@ public class MainClass {
 		if(str8.contains("강아지")) {
 			System.out.println("강아지가 포함되어있습니다.");
 		}
+		
+		System.out.println(StrQuiz04_1.Palindrom("다시 합창합시다"));
 	}
 }

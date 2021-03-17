@@ -26,23 +26,32 @@ public class StrQuiz03 {
 		
 	}
 	
+	//남이 봐도 이해하기 쉽게끔! 
 	public static int test01(int n) {
 		int sum = 0;
 		
 		String str = String.valueOf(n);
 		for(int i=0; i<str.length(); i++) {
-			sum += (int)(str.charAt(i))-48;
+			//sum += (int)(str.charAt(i))-48;
+			sum += Integer.parseInt(str.charAt(i)+ "");
 		}
-		
 		return sum;
 	}
 	
 	public static int test02(int n) {
 		
-		int len = (int)(Math.log10(n))+1;
-		int sum = n % 10;
-		for(int i=1; i<len; i++) {
-			sum += (n / Math.pow(10, len-i)) % 10;
+//		int len = (int)(Math.log10(n))+1;
+//		int sum = n % 10;
+//		for(int i=1; i<len; i++) {
+//			sum += (n / Math.pow(10, len-i)) % 10;
+//		}
+		
+		//쌤 방법
+		int sum = 0;
+		for(int i= 100000000; i >=1; i/=10) {
+			sum += ( n / i ); //몫
+			//n -= ( n / i ) * i;
+			n %= i;
 		}
 		
 		return sum;

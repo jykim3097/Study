@@ -16,8 +16,8 @@ public class Quiz02 {
 		 * 어떤 배열이 주어지던 간에 마라톤을 완주하지 못한 이름(String)을 찾아내는 메서드 작성
 		 */
 
-		String[] participant = {"홍길동", "홍길동", "이순신", "신사임당", "이순신"};
-		String[] completion = {"홍길동", "이순신", "이순신", "신사임당"};
+		String[] participant = {"이순신", "이순신", "신사임당", "신사임당", "이순신"};
+		String[] completion = {"이순신", "이순신", "이순신", "신사임당"};
 
 		System.out.println("완주하지 못한 사람 : " + solution(participant, completion));
 	}
@@ -25,22 +25,22 @@ public class Quiz02 {
 	public static String solution(String[] p, String[] c) {
 
 		String answer = "";
-		String tmp = "";
 
-		Arrays.sort(p);
-		Arrays.sort(c);
-
-		System.out.println(Arrays.toString(p));
-		System.out.println(Arrays.toString(c));
-		
-		for(int i=0; i<p.length-1; i++) {
-			if(p[i].equals(p[i+1])) {
-				tmp += p[i];
-				tmp += " ";
+		//효율성..^^
+		for(int i=0; i<c.length; i++) {
+			for(int j=0; j<p.length; j++) {
+				if(c[i].equals(p[j])) {
+					p[j] = "";
+					break;
+				}
 			}
 		}
-
-		System.out.println("동명이인: " + tmp);
+		
+		for(int i=0; i<p.length; i++) {
+			if(!p[i].equals("")) {
+				answer = p[i];
+			}
+		}
 		
 		return answer;
 	}
