@@ -1,6 +1,7 @@
 package _4_collection.list;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class ArrayListEx {
@@ -10,6 +11,7 @@ public class ArrayListEx {
 		//List - 순서(index), 중복을 허용
 		//ArrayList 생성
 		List<String> list = new ArrayList<>();
+
 		
 		//list에 추가 add()
 		list.add("JAVA");
@@ -48,6 +50,30 @@ public class ArrayListEx {
 		
 		//list 전체삭제 clear() - 
 		list.clear();
+		System.out.println("list: "+list.toString());
+		
+		//addAll - 컬렉션을 통째로 마지막에 추가
+		List<String> list2 = new ArrayList<>();
+		list2.add("홍길동");
+		list2.add("이순신");
+		
+		list.addAll(list2);
 		System.out.println(list.toString());
+		
+		List<Integer> list3 = new ArrayList();
+		list3.add(3);
+		list3.add(4);
+		
+		List<Integer> list4 = new ArrayList();
+		list4.add(2);
+		list4.add(6);
+		
+		list3.addAll(1, list4);
+		System.out.println(list3.toString());
+
+		//Arrays.asList(arr) - 배열을 리스트로 바꾸는 방법
+		String[] arr = {"박찬호", "이순신"};
+		List<String> list5 = Arrays.asList(arr);
+		System.out.println(list5.toString());
 	}
 }
