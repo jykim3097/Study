@@ -3,6 +3,8 @@ package _1_collection.list;
 import java.util.List;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
+import java.util.Vector;
 
 public class LinkedListEx {
 
@@ -20,10 +22,10 @@ public class LinkedListEx {
 		
 		System.out.println(list.toString());
 		
-		//값 얻기
+		//값 얻기 - List에서 사용했던 것과 똑같음
 		System.out.println("0번째 인덱스 값: " + list.get(0));
 		
-		//처음에 추가
+		//처음에 추가 - index 0번에 추가
 		list.addFirst("박찬호");
 		System.out.println(list.toString());
 		
@@ -31,19 +33,41 @@ public class LinkedListEx {
 		list.addLast("신사임당");
 		System.out.println(list.toString());
 		
+		System.out.println("------------------------------------------");
+		
+		//전체 삭제
+		list.clear();
+		System.out.println(list.toString());
+		
+		//LinkedList는 stack처럼 동작 - LIFO(Last In First Out)
 		//push, pop
-		list.push("강감찬"); //마지막에 추가
+		list.push("강감찬"); 
+		list.push("이순신");
+		list.push("박찬호");
 		System.out.println(list.toString());
 
-		//pop - 마지막에 들어간 걸 뽑아냄
-		System.out.println(list.pop());	// 삭제하면서 읽기
+		list.pop(); //꺼내면서 삭제
 		System.out.println(list.toString());
 		
-		System.out.println(list.peek()); //삭제하지 않고 읽기
+		System.out.println(list.peek()); //값만 읽기
+		
+		System.out.println("-----------------------------------------");
+		//LinkedList는 queue처럼 동작 - FIFO(First In First Out)
+		
+		//전체 삭제
+		list.clear();
 		System.out.println(list.toString());
 		
-		list.push("김지영");
+		//offer, poll, peek
+		list.offer("a");
+		list.offer("b");
+		list.offer("c");
+		System.out.println(list.toString());
+
+		list.poll();
 		System.out.println(list.toString());
 		
+		System.out.println(list.peek());
+		System.out.println(list.toString());
 	}
 }
