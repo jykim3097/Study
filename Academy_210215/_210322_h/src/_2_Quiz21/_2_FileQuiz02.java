@@ -1,5 +1,11 @@
 package _2_Quiz21;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class _2_FileQuiz02 {
 
 	public static void main(String[] args) {
@@ -9,5 +15,29 @@ public class _2_FileQuiz02 {
 		 * 3. 파일을 정상적으로 썼다면 BufferedReader를 통해서 읽어들이세요
 		 * 
 		 */
+		
+		BufferedWriter bw = null;
+		
+		Date date = new Date();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
+		String today = sdf.format(date);
+		
+		try {
+			
+			bw = new BufferedWriter(new FileWriter("C:\\DEV\\Academy_210215\\_210322_file\\"+today+".txt"));
+			bw.write(today+"! 오늘도 화이팅!!!");
+			bw.flush();
+			
+			System.out.println("파일이 정상 출력되었습니다.");
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				bw.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
 	}
 }
