@@ -1,6 +1,8 @@
 package _2_Quiz21;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -37,6 +39,28 @@ public class _2_FileQuiz02 {
 				bw.close();
 			} catch (IOException e) {
 				e.printStackTrace();
+			}
+		}
+		
+		System.out.println();
+		
+		// 파일 읽기
+		BufferedReader br = null; // 인코딩 타입을 잘 확인해야한다.
+		
+		try {
+			
+			br = new BufferedReader(new FileReader("C:\\DEV\\Academy_210215\\_210322_file\\"+today+".txt"));
+			
+			String str;
+			while(!(str = br.readLine()).equals(null)) {
+				System.out.println(str);
+			}
+			
+		} catch (Exception e) {
+			try {
+				br.close();
+			} catch (IOException e1) {
+				e1.printStackTrace();
 			}
 		}
 	}
