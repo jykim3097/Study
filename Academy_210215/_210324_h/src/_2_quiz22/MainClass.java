@@ -22,9 +22,10 @@ public class MainClass {
 		 */
 
 		BufferedReader br = null;
-
+		String path = "";
+		
 		try {
-			br = new BufferedReader(new InputStreamReader(new FileInputStream("csv file"),"EUC-KR"));
+			br = new BufferedReader(new InputStreamReader(new FileInputStream(path+""),"EUC-KR"));
 
 			Data data;
 			List<Data> dList = new ArrayList<>();
@@ -49,7 +50,10 @@ public class MainClass {
 			}
 
 			List<Data> newList = dList.stream()
-				.filter((a) -> a.getPrice() == "-1")
+				.filter((a) -> a.getPrice() != "-1")
+				.filter((j) -> j.getRegion().equals("서울"))
+				.filter((j) -> (Integer.parseInt(j.getMonth()) < 6))
+				.filter((j) -> (Integer.parseInt(j.getPrice()) >= 4000))
 				.collect(Collectors.toList());
 
 			newList.stream().forEach((a) -> System.out.println(a.getData()));
