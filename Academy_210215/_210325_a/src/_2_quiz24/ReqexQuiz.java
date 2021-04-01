@@ -84,8 +84,22 @@ public class ReqexQuiz {
 			XSSFRow row = null;
 			XSSFCell cell = null;
 
+			//날짜, 지점, 등급, 상세, 가격
+			row = sheet.createRow(0);
+			
+			cell = row.createCell(0); // 셀 한칸 만들기
+			cell.setCellValue("날짜");
+			cell = row.createCell(1);
+			cell.setCellValue("지점");
+			cell = row.createCell(2);
+			cell.setCellValue("등급");
+			cell = row.createCell(3);
+			cell.setCellValue("상세");
+			cell = row.createCell(4);
+			cell.setCellValue("가격");
+			
 			if(list != null && list.size() > 0) {
-				int i =0; //i는 줄의 의미, 0이면 첫번째 줄
+				int i =1; //i는 줄의 의미, 0이면 첫번째 줄
 				for(Product p : list) {
 					row = sheet.createRow(i);
 					i++;
